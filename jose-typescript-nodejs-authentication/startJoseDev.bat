@@ -1,0 +1,22 @@
+setlocal
+set GUIDEWIRE_USER_NAME=sa
+set GUIDEWIRE_PASSWORD=@Scjp580821
+set GUIDEWIRE_DEFAULT_DATABASE=master
+set GUIDEWIRE_HOST_NAME=localhost
+set GUIDEWIRE_BILLING_CENTER_DATABASE=GW304
+set GUIDEWIRE_POLICY_CENTER_DATABASE=GW304
+set GUIDEWIRE_CLAIM_CENTER_DATABASE=GW304
+set GUIDEWIRE_CONTACT_MANAGER_DATABASE=GW304
+set EVENTSGL_USER_NAME=usr_eventgl
+set EVENTSGL_PASSWORD=Youse123*
+set EVENTSGL_DEFAULT_DATABASE=GLInterface
+set EVENTSGL_HOST_NAME=SANSERVER60\DIGDEV
+set SQL_FOLDER=./sql/schedule
+set DATABASE_URL=postgres://postgres:admin@localhost:5432/jose
+set SLACK_URL=https://hooks.slack.com/services/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
+set SLACK_CHANNEL=gw-jose-test
+call npm run build_typescript
+call npm run migrate
+call npm run watch
+call npm run dev
+

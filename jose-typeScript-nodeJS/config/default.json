@@ -1,0 +1,18 @@
+{
+  "guidewire": {
+    "default_env":"@@GUIDEWIRE_DEFAULT_ENV",
+    "envs": ["@@GUIDEWIRE_ENVS"]
+  },
+  "sql_folder": "@@SQL_FOLDER",
+  "database_url": "@@DATABASE_URL",
+  "slack": {
+    "url": "@@SLACK_URL",
+    "channel": "@@SLACK_CHANNEL"
+  },
+  "eventsGL": {
+    "user_name": "@@EVENTSGL_USER_NAME",
+    "password": "@@EVENTSGL_PASSWORD",
+    "default_database": "@@EVENTSGL_DEFAULT_DATABASE",
+    "host_name": "@@EVENTSGL_HOST_NAME" 
+  }
+}

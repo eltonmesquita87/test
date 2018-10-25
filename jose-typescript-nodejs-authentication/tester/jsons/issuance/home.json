@@ -1,0 +1,229 @@
+{
+  "id": "3",
+  "method": "createSaveQuoteAndBind_GCS",
+  "jsonrpc": "2.0",
+  "params": [
+    {
+      "draftData": {
+        "accountHolder": {
+          "tempId": 1,
+          "accountHolder": true,
+          "primaryPhoneType": "home",
+          "firstName": "Teste 3",
+          "lastName": "3",
+          "emailAddress1": "lfventura@gmail.com",
+          "homeNumber": "(11) 99287-2529",
+          "homePhoneCountryCode_GCS": "BR",
+          "workPhoneCountryCode_GCS": "BR",
+          "cellPhoneCountryCode_GCS": "BR",
+          "taxID": "{{insuredTaxID}}",
+          "dateOfBirth": "1985-11-07T00:00:00.000-02:00",
+          "gender_GCS": "M",
+          "salaryRange_GCS": "Band4",
+          "professionCode_GCS": 241005,
+          "nationality_GCS": "BR",
+          "maritalStatus": "U"
+        },
+        "policyAddress": {
+          "postalCode": "07097-300",
+          "country": "BR",
+          "type": "home",
+          "addressType": "home",
+          "addressLine1": "RUA UBIRATA",
+          "addressLine2": "147, ",
+          "city": "GUARULHOS",
+          "state": "BR_SP",
+          "neighborhood_GCS": "JARDIM SANTA MENA"
+        },
+        "periodStartDate": "{{periodStartDate}}",
+        "proposedDate_GCS": "{{periodStartDate}}",
+        "productCode": "Homeowners",
+        "lobs": {
+          "homeowners": {
+            "preQualQuestionSets": [
+              {
+                "code": "GCS_HO_PreQual",
+                "answers": {
+                  "GCS_PatrimonioHistorico": "false",
+                  "GCS_RiskLocalISWoodConstruction": "false",
+                  "GCS_AreaRuralOuAssemelhada": "false",
+                  "GCS_RiskLocalISCollectiveHousing": "false",
+                  "GCS_ConstricaoReformaETC": "false"
+                }
+              }
+            ],
+            "policyAddress": {
+              "postalCode": "07097-300",
+              "country": "BR",
+              "addressLine1": "RUA UBIRATA",
+              "addressLine2": "147, ",
+              "city": "GUARULHOS",
+              "state": "BR_SP",
+              "addressType": "billing",
+              "neighborhood_GCS": "JARDIM SANTA MENA"
+            },
+            "yourHome": {
+              "residenceType": "home",
+              "occupancy": "home_GCS",
+              "riskLocation_GCS": false,
+              "realtyMoneyValue_GCS": {
+                "amount": "400000.0",
+                "currency": "brl"
+              },
+              "wasteland_GCS": false,
+              "ownerImmobile_GCS": true,
+              "anotherInsured_GCS": ""
+            },
+            "additionalInterests_GCS": [],
+            "customQuote_GCS": {
+              "quote": {
+                "branchName": "CUSTOM",
+                "branchCode": "CUSTOM",
+                "isCustom": true,
+                "total": {
+                  "amount": 4,
+                  "currency": "brl"
+                },
+                "monthlyPremium": {
+                  "amount": 0.07,
+                  "currency": "brl"
+                },
+                "termMonths": 60,
+                "taxes": {
+                  "amount": 0,
+                  "currency": "brl"
+                },
+                "totalBeforeTaxes": {
+                  "amount": 4,
+                  "currency": "brl"
+                },
+                "lobs": {
+                  "homeowners": {
+                    "basePremium": {
+                      "amount": 0,
+                      "currency": "brl"
+                    },
+                    "baseCoverages": [
+                      {
+                        "updated": false,
+                        "terms": [
+                          {
+                            "patternCode": "GCS_HO_IncendioCovLimit",
+                            "options": [],
+                            "chosenTerm": "2.4E+5",
+                            "chosenTermValue": "2.4E+5",
+                            "directValue": "2.4E+5",
+                            "updated": true
+                          },
+                          {
+                            "patternCode": "GCS_HO_IncendioCovReintegracao",
+                            "options": [
+                              {
+                                "code": "zt2jeuq3uosnafrh8kgejmu8ge9",
+                                "optionValue": "1"
+                              }
+                            ],
+                            "chosenTerm": "zt2jeuq3uosnafrh8kgejmu8ge9",
+                            "chosenTermValue": "1",
+                            "updated": true
+                          }
+                        ],
+                        "selected": true,
+                        "publicID": "GCS_HO_IncendioExplosaoRaiosCov"
+                      }
+                    ],
+                    "additionalCoverages": [
+                      {
+                        "updated": false,
+                        "terms": [
+                          {
+                            "patternCode": "GCS_HO_DanosEletricosCovLimit",
+                            "options": [],
+                            "chosenTerm": "2.4E+3",
+                            "chosenTermValue": "2.4E+3",
+                            "directValue": "2.4E+3",
+                            "updated": true
+                          },
+                          {
+                            "patternCode": "GCS_HO_DanosEletricosCovReintegracao",
+                            "options": [
+                              {
+                                "code": "zd2g6imr895328rn0q6p18bcqgb",
+                                "optionValue": "1"
+                              }
+                            ],
+                            "chosenTerm": "zd2g6imr895328rn0q6p18bcqgb",
+                            "chosenTermValue": "1",
+                            "updated": true
+                          },
+                          {
+                            "patternCode": "GCS_HO_DanosEletricosCovDeductible",
+                            "options": [
+                              {
+                                "code": "zh0g40o0les9t2bjblrtq68adja",
+                                "name": "GCS_10%_200Reais"
+                              }
+                            ],
+                            "chosenTerm": "zh0g40o0les9t2bjblrtq68adja",
+                            "chosenTermValue": "GCS_10%_200Reais",
+                            "updated": true
+                          }
+                        ],
+                        "selected": true,
+                        "publicID": "GCS_HO_DanosEletricosCov"
+                      },
+                      {
+                        "updated": false,
+                        "terms": [
+                          {
+                            "patternCode": "GCS_HO_RouboFurtoCovLimit",
+                            "options": [],
+                            "chosenTerm": "2.4E+3",
+                            "chosenTermValue": "2.4E+3",
+                            "directValue": "2.4E+3",
+                            "updated": true
+                          },
+                          {
+                            "patternCode": "GCS_HO_RouboFurtoCovReintegracao",
+                            "options": [
+                              {
+                                "code": "zbfg8a5pk70fo22e1eklcpmbo2b",
+                                "optionValue": "1"
+                              }
+                            ],
+                            "chosenTerm": "zbfg8a5pk70fo22e1eklcpmbo2b",
+                            "chosenTermValue": "1",
+                            "updated": true
+                          }
+                        ],
+                        "selected": true,
+                        "publicID": "GCS_HO_RouboFurtoCov"
+                      },
+                      {
+                        "updated": false,
+                        "terms": [],
+                        "selected": true,
+                        "publicID": "GCS_HO_AAssistenciaResidencialBasicoCov"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "questionSetNames": [],
+        "salesChannel_GCS": "1002",
+        "isProposal_GCS": false,
+        "externalProposalNumber_GCS": "{{externalProposalNumber_GCS}}",
+        "specialAcceptance_GCS": false,
+        "externalRatingXMLResponse_GCS": "<?xml version=\"1.0\"?><pricing><risk_premium>192.0</risk_premium><pure_premium>192.0</pure_premium><net_premium>638.41</net_premium><taxes_cost>47.1</taxes_cost><discount>385.48</discount><total_premium>685.51</total_premium><monthly_net_premium>10.63</monthly_net_premium><monthly_taxes_cost>0.77</monthly_taxes_cost><monthly_discount>6.41</monthly_discount><monthly_total_premium>11.4</monthly_total_premium><installments_count>60</installments_count><additional_fractionation>0.0</additional_fractionation><pricing_version>home-pricing-1-1-1</pricing_version><assistances_total_cost>322.8</assistances_total_cost><monthly_assistances_total_cost>5.38</monthly_assistances_total_cost><total_cost>1008.31</total_cost><monthly_total_cost>16.78</monthly_total_cost><coverages><Item><id>1</id><gw_id>GCS_HO_IncendioExplosaoRaiosCov</gw_id><risk_premium>83.98</risk_premium><pure_premium>83.98</pure_premium><net_premium>279.96</net_premium><taxes_cost>20.66</taxes_cost><discount>167.96</discount><total_premium>300.62</total_premium><monthly_net_premium>4.66</monthly_net_premium><monthly_taxes_cost>0.34</monthly_taxes_cost><monthly_discount>2.79</monthly_discount><monthly_total_premium>5.0</monthly_total_premium></Item><Item><id>2</id><gw_id>GCS_HO_DanosEletricosCov</gw_id><risk_premium>24.82</risk_premium><pure_premium>24.82</pure_premium><net_premium>81.09</net_premium><taxes_cost>5.98</taxes_cost><discount>51.12</discount><total_premium>87.07</total_premium><monthly_net_premium>1.35</monthly_net_premium><monthly_taxes_cost>0.09</monthly_taxes_cost><monthly_discount>0.85</monthly_discount><monthly_total_premium>1.44</monthly_total_premium></Item><Item><id>3</id><gw_id>GCS_HO_RouboFurtoCov</gw_id><risk_premium>83.2</risk_premium><pure_premium>83.2</pure_premium><net_premium>277.36</net_premium><taxes_cost>20.46</taxes_cost><discount>166.4</discount><total_premium>297.82</total_premium><monthly_net_premium>4.62</monthly_net_premium><monthly_taxes_cost>0.34</monthly_taxes_cost><monthly_discount>2.77</monthly_discount><monthly_total_premium>4.96</monthly_total_premium></Item></coverages><assistances><Item><id>AR1</id><gw_id>GCS_HO_AAssistenciaResidencialBasicoCov</gw_id><cost>322.8</cost><taxes_cost>0.0</taxes_cost><discount>0.0</discount><monthly_cost>5.38</monthly_cost><monthly_taxes_cost>0.0</monthly_taxes_cost><monthly_discount>0.0</monthly_discount></Item></assistances></pricing>"
+      },
+      "bindData": {
+        "selectedPaymentPlanName_GCS": "Residencial",
+        "paymentMethodDownPayment_GCS": "CreditCard",
+        "paymentMethodInstallments_GCS": "CreditCard"
+      }
+    }
+  ]
+}

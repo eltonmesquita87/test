@@ -1,0 +1,1 @@
+select distinct pp.policynumber,pp.ExternalProposalNumber_GCS,m.ErrorDescription from bc_message minner join bc_policyperiod pp on pp.id = m.policyperiodidwhere destinationid = 33and errordescription is not null

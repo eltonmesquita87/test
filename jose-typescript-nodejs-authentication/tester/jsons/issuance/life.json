@@ -1,0 +1,196 @@
+{
+  "id": "4",
+  "method": "createSaveQuoteAndBind_GCS",
+  "params": [
+    {
+      "draftData": {
+        "accountHolder": {
+          "tempID": 1,
+          "accountHolder": true,
+          "primaryPhoneType": "home",
+          "firstName": "Teste 10",
+          "lastName": "10",
+          "emailAddress1": "alterado@gcs.com.br",
+          "homePhoneCountryCode_GCS": "BR",
+          "homeNumber": "(22) 2222-1222",
+          "workPhoneCountryCode_GCS": "BR",
+          "workNumber": "(44) 4444-4444",
+          "cellPhoneCountryCode_GCS": "BR",
+          "cellNumber": "(33) 3333-3333",
+          "dateOfBirth": "1950-12-09T12:00:00.000Z",
+          "taxID": "{{insuredTaxID}}",
+          "gender_GCS": "F",
+          "salaryRange_GCS": "Band4",
+          "professionCode_GCS": "999105",
+          "nationality_GCS": "BR",
+          "maritalStatus": "M"
+        },
+        "policyAddress": {
+          "postalCode": "72010-050",
+          "country": "BR",
+          "addressType": "billing",
+          "addressLine1": "C 5",
+          "addressLine2": "Edificio 1",
+          "city": "Brasilia",
+          "state": "BR_DF",
+          "neighborhood_GCS": "TAGUATINGA CENTRO (TAGUATINGA)"
+        },
+        "periodStartDate": "{{periodStartDate}}",
+        "proposedDate_GCS": "{{periodStartDate}}",
+        "productCode": "AAHAandH",
+        "lobs": {
+          "aAHAandH": {
+            "policyAddress": {
+              "addressLine1": "SCN QUADRA, 5",
+              "addressLine2": "Edificio 1",
+              "city": "Brasilia",
+              "state": "BR_DF",
+              "postalCode": "70715-900",
+              "country": "BR",
+              "addressType": "home",
+              "neighborhood_GCS": "Asa Norte"
+            },
+            "aandHPartys": [
+              {
+                "tempId_GCS": "10",
+                "coveredPerson": {
+                  "tempID": 1,
+                  "primaryPhoneType": "home",
+                  "firstName": "Teste 1",
+                  "lastName": "Gusta2",
+                  "emailAddress1": "alterado@gcs.com.br",
+                  "homePhoneCountryCode_GCS": "BR",
+                  "homeNumber": "(22) 2222-1222",
+                  "workPhoneCountryCode_GCS": "BR",
+                  "workNumber": "(44) 4444-4444",
+                  "cellPhoneCountryCode_GCS": "BR",
+                  "cellNumber": "(33) 3333-3333",
+                  "dateOfBirth": "1970-12-09T12:00:00.000Z",
+                  "taxID": "{{insuredTaxID}}",
+                  "gender_GCS": "F",
+                  "accountHolder": true,
+                  "salaryRange_GCS": "Band4",
+                  "professionCode_GCS": "999105",
+                  "nationality_GCS": "BR",
+                  "maritalStatus": "M"
+                },
+                "additionalInterests_GCS": [
+                  {
+                    "relationship_GCS": "Parent",
+                    "percentageCompensation": 100,
+                    "person": {
+                      "tempID": 2,
+                      "firstName": "Beneficiario Torres",
+                      "lastName": "Beneficiario"
+                    }
+                  }
+                ],
+                "coveredPersonRole": "PrimaryInsured"
+              },
+              {
+                "tempId_GCS": "11",
+                "coveredPerson": {
+                  "tempID": 3,
+                  "primaryPhoneType": "home",
+                  "firstName": "Conjugue a",
+                  "lastName": "bc",
+                  "homePhoneCountryCode_GCS": "BR",
+                  "homeNumber": "(22) 2222-1222",
+                  "dateOfBirth": "1970-12-09T12:00:00.000Z",
+                  "taxID": "{{spouseTaxID}}",
+                  "professionCode_GCS": "999105"
+                },
+                "additionalInterests_GCS": [],
+                "coveredPersonRole": "Spouse"
+              }
+            ],
+            "customQuote_GCS": {
+              "quote": {
+                "branchName": "CUSTOM",
+                "branchCode": "CUSTOM",
+                "isCustom": true,
+                "total": {
+                  "amount": 4,
+                  "currency": "brl"
+                },
+                "monthlyPremium": {
+                  "amount": 0.07,
+                  "currency": "brl"
+                },
+                "termMonths": 60,
+                "taxes": {
+                  "amount": 0,
+                  "currency": "brl"
+                },
+                "totalBeforeTaxes": {
+                  "amount": 4,
+                  "currency": "brl"
+                },
+                "lobs": {
+                  "aAHAandH": {
+                    "basePremium": {
+                      "amount": 0,
+                      "currency": "brl"
+                    },
+                    "aahPartyCoverages": [
+                      {
+                        "tempId_GCS": "10",
+                        "coverages": [
+                          {
+                            "updated": false,
+                            "terms": [
+                              {
+                                "patternCode": "GCS_AAH_MorteCausasNaturaisEAcidentaisCovLimit",
+                                "options": [],
+                                "chosenTerm": "30000.00",
+                                "chosenTermValue": "30.000,00",
+                                "directValue": "30000.00",
+                                "updated": true
+                              },
+                              {
+                                "patternCode": "GCS_AAH_MorteCausasNaturaisCovReintegracao",
+                                "options": [
+                                  {
+                                    "code": "z0ji4tqbdhdiudffmd9el83b2s8",
+                                    "optionValue": 1
+                                  }
+                                ],
+                                "chosenTerm": "z0ji4tqbdhdiudffmd9el83b2s8",
+                                "chosenTermValue": "1",
+                                "updated": true
+                              }
+                            ],
+                            "selected": true,
+                            "publicID": "GCS_AAH_MorteCausasNaturaisEAcidentaisCov"
+                          }
+                        ]
+                      },
+                      {
+                        "tempId_GCS": "11",
+                        "coverages": []
+                      }
+                    ],
+                    "lineCoverages": []
+                  }
+                }
+              }
+            }
+          }
+        },
+        "questionSetNames": [],
+        "salesChannel_GCS": "1002",
+        "isProposal_GCS": false,
+        "externalProposalNumber_GCS": "{{externalProposalNumber_GCS}}",
+        "specialAcceptance_GCS": false,
+        "comboAsisstancesCode_GCS": "CA1",
+        "externalRatingXMLResponse_GCS": "<?xml version=\"1.0\"?><pricing><risk_premium>200.00</risk_premium><pure_premium>240.00</pure_premium><net_premium>600.00</net_premium><taxes_cost>60.0</taxes_cost><discount>0.0</discount><total_premium>660.10</total_premium><monthly_net_premium>10.00</monthly_net_premium><monthly_taxes_cost>1.0</monthly_taxes_cost><monthly_discount>0.0</monthly_discount><monthly_total_premium>11.0</monthly_total_premium><installments_count>60</installments_count><additional_fractionation>0.0</additional_fractionation><pricing_version>life-pricing-1-1-1</pricing_version><assistances_total_cost>0.0</assistances_total_cost><monthly_assistances_total_cost>0.0</monthly_assistances_total_cost><total_cost>0.0</total_cost><monthly_total_cost>0.0</monthly_total_cost><coverages><Item><id>1</id><gw_id>GCS_AAH_MorteCausasNaturaisEAcidentaisCov</gw_id><risk_premium>480.10</risk_premium><pure_premium>240.00</pure_premium><net_premium>600.0</net_premium><taxes_cost>60.0</taxes_cost><discount>0.0</discount><total_premium>660.0</total_premium><monthly_net_premium>10.0</monthly_net_premium><monthly_taxes_cost>1.0</monthly_taxes_cost><monthly_discount>0.0</monthly_discount><monthly_total_premium>11.0</monthly_total_premium></Item></coverages><assistances/></pricing>"
+      },
+      "bindData": {
+        "selectedPaymentPlanName_GCS": "Vida",
+        "paymentMethodDownPayment_GCS": "creditcard",
+        "paymentMethodInstallments_GCS": "creditcard"
+      }
+    }
+  ],
+  "jsonrpc": "2.0"
+}

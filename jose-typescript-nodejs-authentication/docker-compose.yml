@@ -1,0 +1,40 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    restart: always    
+    ports:
+      - "5439:5432"
+    environment:            
+      POSTGRES_USER: jose
+      POSTGRES_PASSWORD: docker
+  web:
+    build: 
+      context: .
+    command: /bin/bash -c "npm run webpack"
+    volumes:
+      - .:/web
+    ports:
+      - "8081:8081" 
+
+  back:
+    build: 
+      context: .
+    command: /bin/bash -c "npm run build_typescript && npm run server"
+    volumes:
+      - .:/app
+    ports:
+      - "8086:8086"  
+    environment:      
+      DATABASE_URL: postgres://jose:docker@db:5432
+      GUIDEWIRE_ENVS: qa
+      GUIDEWIRE_USER_NAME_QA: gustavo.sanchez
+      GUIDEWIRE_PASSWORD_QA: QwFG5tg6NQs6ehb
+      GUIDEWIRE_HOSTNAME_QA: db-guidewire-qa.youse.io
+      GUIDEWIRE_BILLING_CENTER_DATABASE_QA: GWBC_qa
+      GUIDEWIRE_POLICY_CENTER_DATABASE_QA: GWPC_qa
+      GUIDEWIRE_CLAIM_CENTER_DATABASE_QA: GWCC_qa
+      GUIDEWIRE_CONTACT_MANAGER_DATABASE_QA: GWAB_qa
+      SLACK_CHANNEL: gw-jose-test
+    depends_on:
+      - db

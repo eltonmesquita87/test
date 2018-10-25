@@ -1,0 +1,1 @@
+select distinct pp.policynumber,m.ErrorDescription from cc_message minner join cc_claim c on c.id = m.claimidinner join cc_policy pp on pp.id = c.policyidwhere destinationid = 16and errordescription is not null

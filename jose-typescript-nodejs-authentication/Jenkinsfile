@@ -1,0 +1,99 @@
+#!groovy
+
+def nodejs = new io.youse.nodejs()
+
+def dockerImage = 'node:8'
+def appName = 'gwjose'
+def slackChannel = '#deploys'
+
+def jenkinsQA = 'jenkins-qa-stage'
+def jenkinsProd = 'jenkins-production'
+
+slackSend channel: slackChannel, message: "Build Started - $JOB_NAME #$BUILD_NUMBER (<$BUILD_URL|Open>)"
+
+stage('code-pull') {
+  youseEnv = codePull(node: jenkinsQA)
+
+  if (youseEnv == 'stage') {
+    jobConfigs(
+      projectName: 'gw-jose'
+    )
+  } else {
+    jobConfigs(
+      projectName: 'gw-jose',
+      githubHook: true
+    )
+  }
+}
+
+stage('unit-tests') {
+  nodejs.unitTests(
+    node: jenkinsQA,
+    appName: appName,
+    youseEnv: youseEnv,
+    dockerImage: dockerImage,
+    preInstall: ['cp .env-example .env'],
+    slackChannel: slackChannel
+  )
+}
+
+stage('packaging') {
+  nodejs.packaging(
+    node: jenkinsQA,
+    appName: appName,
+    youseEnv: youseEnv,
+    dockerImage: dockerImage,
+    postInstall: ['npm run build_typescript'],
+    slackChannel: slackChannel
+  )
+}
+
+stage("deploy-$youseEnv") {
+  ansible(
+    node: jenkinsQA,
+    appName: appName,
+    youseEnv: youseEnv,
+    playbook: 'gwjose_app.yml',
+    extraVars: [
+      "youse_environment=$youseEnv",
+      "region=sa-east-1",
+      "account=dev"
+    ],
+    tags: ['deploy'],
+    slackChannel: slackChannel
+  )
+}
+
+if (youseEnv == 'stage') {
+  stage('promote-to-prod') {
+    approve(
+      message: 'Promote changes to Production?'
+    )
+
+    changes = promote(
+      node: jenkinsQA,
+      appName: appName,
+      youseEnv: youseEnv,
+      bucketName: 'youse-rpms-repo',
+      slackChannel: slackChannel
+    )
+  }
+
+  stage('deploy-production') {
+    ansible(
+      node: jenkinsProd,
+      appName: appName,
+      youseEnv: 'production',
+      playbook: 'gwjose_app.yml',
+      extraVars: [
+        "youse_environment=production",
+        "region=sa-east-1",
+        "account=prod"
+      ],
+      tags: ['deploy'],
+      slackChannel: slackChannel
+    )
+
+    slackSend channel: "#changelogs_prod", message: "*Changelog $appName* \n$changes"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "method": "createCancellationPolicy",
+  "params": [
+        { "PolicyNumber": "{{policyNumber}}",
+        "CancellationSource": "insured",
+        "CancelReasonCode": "CancelamentoSegurado_GCS",
+        "Description": "By Groot!",
+         "ProtocolNumber": "1234"
+  }],
+  "jsonrpc": "2.0"
+}

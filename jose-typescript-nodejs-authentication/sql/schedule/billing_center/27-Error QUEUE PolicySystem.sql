@@ -1,0 +1,1 @@
+select distinct m.payload, m.ErrorDescription from bc_message mwhere destinationid = 32and errordescription is not null
