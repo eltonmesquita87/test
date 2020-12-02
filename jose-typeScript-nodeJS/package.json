@@ -38,7 +38,7 @@
     "pg": "^7.4.1",
     "pg-hstore": "^2.3.2",
     "sequelize": "^4.37.3",
-    "sequelize-cli": "^4.0.0",
+    "sequelize-cli": "^5.0.1",
     "slack-incoming-webhook": "^1.1.0",
     "slack-notify": "^0.1.6",
     "typescript": "^2.7.2",
