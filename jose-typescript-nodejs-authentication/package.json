@@ -52,7 +52,7 @@
     "slack-incoming-webhook": "^1.1.0",
     "slack-notify": "^0.1.6",
     "soap": "^0.23.0",
-    "sqlite3": "^4.0.1",
+    "sqlite3": "^5.0.3",
     "typescript": "^2.7.2",
     "vue": "^2.5.2",
     "vue-resource": "^1.5.0",
