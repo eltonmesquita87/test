@@ -24,10 +24,10 @@
   "dependencies": {
     "axios": "^0.18.0",
     "axios-progress-bar": "^1.1.8",
-    "body-parser": "^1.18.2",
+    "body-parser": "^1.19.2",
     "csv-stringify": "^3.0.0",
     "dotenv": "^5.0.1",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "json-csv": "^1.5.0",
     "json2csv": "^4.0.2",
     "jsonexport": "^2.0.11",
