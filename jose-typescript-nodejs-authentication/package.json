@@ -48,7 +48,7 @@
     "request": "^2.85.0",
     "request-promise": "^4.2.2",
     "sequelize": "^4.37.3",
-    "sequelize-cli": "^4.0.0",
+    "sequelize-cli": "^6.3.0",
     "slack-incoming-webhook": "^1.1.0",
     "slack-notify": "^0.1.6",
     "soap": "^0.23.0",
