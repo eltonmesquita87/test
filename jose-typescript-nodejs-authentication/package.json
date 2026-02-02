@@ -24,7 +24,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "axios-progress-bar": "^1.1.8",
-    "bcrypt": "^2.0.1",
+    "bcrypt": "^5.0.1",
     "body-parser": "^1.18.2",
     "csv-stringify": "^3.0.0",
     "dotenv": "^5.0.1",
@@ -52,7 +52,7 @@
     "slack-incoming-webhook": "^1.1.0",
     "slack-notify": "^0.1.6",
     "soap": "^0.23.0",
-    "sqlite3": "^4.0.1",
+    "sqlite3": "^5.0.3",
     "typescript": "^2.7.2",
     "vue": "^2.5.2",
     "vue-resource": "^1.5.0",
